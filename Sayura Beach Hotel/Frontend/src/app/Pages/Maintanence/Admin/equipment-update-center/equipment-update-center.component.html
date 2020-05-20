@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-maintanace-sidebar></app-maintanace-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container">
+                    <h1>Update Equipment Center</h1>
+
+
+                    <form #updateequipment=ngForm>
+                            <div class="panel from-panel" style="margin-top: 40px">
+                                <div class="panel-heading">
+                                    <p class="head">View Equipment Details</p>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for='name'>NIC</label>
+                                            <input type="text" class="form-control" id = "eNIC" required [(ngModel)]="model.eNIC"
+                                                name="eNIC">
+                                            </div>
+                                        </div>
+                                            <div class="panel-footer">
+                                                <button type="submit" class="btn btn-success" (click)="method1()">View</button>
+                                                </div>
+                                            </div>
+                                            </form>
+
+
+
+
+                        <form #updateequipment=ngForm>
+                   
+            <div class="panel form-panel" style="margin-top: 40px">
+                    <div class="panel-heading">
+                        <p class="head">Update Equipment</p>
+                    </div>
+                   
+                    <div class="panel-body">
+                            <div class="from-group">
+                  <label for='name'>Equipment Id:</label>
+                  <input type="text" class="form-control" id="eNIC" required [(ngModel)]="model.eNIC" name="eNIC">
+                              </div>
+        
+                              <div class="from-group">
+                  <label for='name'>Date:</label>
+                  <input type="date" class="form-control" id="edate" required [(ngModel)]="model.edate" name="edate">
+                                </div>
+        
+        
+                                <div class="from-group">
+                  <label for='name'>Quantity:</label>
+                  <input type="number" class="form-control" id="quantity" required [(ngModel)]="model.equantity" name="quantity">
+                                  </div>
+        
+        
+                                  <div class="from-group">
+                  <label for='name'>Price:</label>
+                  <input type="number" class="form-control" id="price" required [(ngModel)]="model.eprice" name="price">
+                                    </div>
+        
+                  <br>
+                  <div class="panel-footer">
+                  <button type="submit" class="btn btn-success" (click)="updatee()"(click)="method2()" >Submit</button>
+                  </div>
+                    </div>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+    

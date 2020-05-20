@@ -1,0 +1,50 @@
+/* @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css'); */
+.container{
+     width: 900px;/*changed it*/
+    height:900px ; 
+    background-color: white; 
+    margin-top: 50px;
+    border-radius: 1%
+}
+    
+    .col-sm-9{
+      background-color: #212121;
+      width: 85%; 
+      height: 1100px;
+       
+    }
+    .age{
+      margin-top: 126px;/*newly added*/
+    }
+    .birth{
+      margin-top: 500px;/*newly added*/
+    }
+    .form-row-1{
+      margin-top: 260px;/*newly added*/
+    }
+    .form-row-2{
+      margin-top: 380px;/*newly added*/
+    }
+    .gender{
+      margin-top: 500px;/*newly added*/
+    }
+    h1{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    label{
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 16px;
+    }
+    form{
+      width: 80%;
+      margin-left: 40px;/*changed it*/
+     
+    }
+    .head{
+      font-size: 24px;
+    }
+    .form-panel{
+      width: 80%;
+    
+    }
+    

@@ -1,0 +1,59 @@
+body {font-family: Arial, Helvetica, sans-serif}
+form {border: 3px solid saddlebrown; border-radius: 10%;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid saddlebrown;
+  box-sizing: border-box;
+}
+button {
+  background-color: saddlebrown;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  border-radius: 5%;
+  opacity: 0.8;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 60%;
+
+}
+
+.container {
+  padding: 40px;
+}
+
+.login{
+    padding-top: 8%;
+    margin: auto;
+    width: 30%;
+    
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+.page{
+  height: 650px;
+  width: 100%;
+  background-image:url(./../../../../assets/images/back.png);
+  border: 2px solid saddlebrown;
+}
+

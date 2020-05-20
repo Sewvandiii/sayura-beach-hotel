@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<app-transport-sidebar></app-transport-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+                <div class="col-sm-9">
+                <div class="container">
+                        <h1>Available vehicle details</h1><br>
+                          <table class ="table table-trapped">
+
+                            <thead>
+                                
+                              <tr>
+                                <th>Vehicle Id</th>
+                                <th>Make</th>
+                                <th>Vehicle Model</th>
+                                <th>License Plate</th>
+                                <th>Max passengers</th>
+                                <th>Man_Year</th>
+                                <th>Vehicle Colour</th>
+                                <th><button type="submit" class="btn btn-success" (click)='methodv()'>View</button></th>
+                                <th><button type="submit" class="btn btn-success" (click)="onclick()">Report</button></th>
+                              </tr>   
+                            </thead>
+                            
+                            <br>
+
+                            <tbody>
+                              <tr *ngFor="let row of vehicles">
+                                <td>
+                                  <input disabled="text" class="form-control" id="id" required value={{row.VehicleID}} name="id">
+                                </td>
+                                <td>
+                                    <input disabled="text" class="form-control" id="vehicle" required value={{row.vName}} name="vehicle">
+                                </td>
+                                <td>
+                                    <input disabled="text" class="form-control" id="mod" required value={{row.mName}} name="mod">
+                                </td>
+                                <td>
+                                    <input disabled="text" class="form-control" id="license" required value={{row.Licence}} name="license">
+                                </td>
+                                <td>
+                                    <input disabled="text" class="form-control" id="passengers" required value={{row.Max}} name="passengers">
+                                </td>
+                                <td>
+                                    <input disabled="text" class="form-control" id="year" required value={{row.Year}} name="year">
+                                </td>
+                                <td>
+                                    <input disabled="text" class="form-control" id="colour" required value={{row.Colour}} name="colour">
+                                </td>
+
+                              </tr>
+                          </table>
+                        </div>
+              
+
+                    </div>
+        </div>
+    </div>
+
+
+
+  
+
+
+    
+

@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-maintanace-sidebar></app-maintanace-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container">
+                <h1>Dailyshift Insert Center</h1>
+                <form #insertdailyshift=ngForm>
+                    <label for='name'>Employee Id:</label>
+                    <input type="text" class="form-control" id="nic"
+                    required
+                    [(ngModel)]="model.nic" name="nic">
+        
+                        
+
+                    <label for='name'>Time:</label>
+                    <input type="time" class="form-control" id="time"
+                    required
+                    [(ngModel)]="model.time" name="time">
+
+
+
+                    
+                    <label for='name'>Date:</label>
+                    <input type="date" class="form-control" id="date"
+                    required
+                    [(ngModel)]="model.date" name="date">
+
+
+
+                    <!-- <label for='name'>Section:</label>
+                    <select class="form-control" id="section">
+                    <option selected>Choose.....</option>
+                    <option>Front Office</option>
+                    <option>House keeping</option>
+                    <option>Kitchen</option>
+                    <option>Resturant</option> -->
+
+
+
+
+   
+                     <!-- </select>
+                    <label for='name'>Position:</label>
+                    <select class="form-control" id="position">
+                    <option selected>Choose.....</option>
+                    <option>Front office Manager</option>
+                    <option>Front office supervisor</option>
+                    <option>Receptionist</option>
+                    <option>Exective Chef</option>
+                    <option>Soue Chef</option>
+                    <option>Chef Departy</option>
+                    <option>Cook</option>
+                    <option>Waiter</option>
+                    <option>House Keeper</option>
+                    <option>General Cleaner</option>
+                    <option>Gardener</option>
+                    </select> 
+                    <br> -->
+                    <button type="submit" class="btn btn-success" (click)="method()">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

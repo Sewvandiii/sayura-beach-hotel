@@ -1,0 +1,108 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-maintanace-sidebar></app-maintanace-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container">
+
+                    <h1>Update Dailyshift Center</h1>
+                                       
+                    <form #updatedailyshift=ngForm>
+                        <div class="panel from-panel" style="margin-top: 40px">
+                            <div class="panel-heading">
+                                <p class="head">View Dailyshift Details</p>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <label for='name'>NIC</label>
+                                        <input type="text" class="form-control" id = "nic" required [(ngModel)]="model.NIC"
+                                            name="nic">
+                                        </div>
+                                    </div>
+                                        <div class="panel-footer">
+                                            <button type="submit" class="btn btn-success" (click)="method1()">View</button>
+                                            </div>
+                                        </div>
+                                        </form>
+
+
+                                <form #updatedailyshift=ngForm>
+                                                
+                                    <div class="panel form-panel" style="margin-top: 40px">
+                                    <div class="panel-heading">
+                                        <p class="head">Update Dailyshift</p>
+                                    </div>
+                                   
+
+                                    <div class="panel-body">
+                                            <div class="from-group" [class.has-error]= "NIC.invalid && NIC.touched">
+                                                    <label for='name'>Employee Id:</label>
+                                                    <input type="text" class="form-control" id="NIC" required #NIC="ngModel"
+                                                    [(ngModel)]="model.NIC" name="nic" >
+                                                    <span class = "help-block"
+                                                    *ngIf = "NIC.invalid && NIC.touched">NIC is required
+                                                    </span>
+                                                    </div>
+                                                    <div class="from-group" [class.has-error]= "time.invalid && time.touched">
+                                                            <label for='name'>Time:</label>
+                                                            <input type="time" class="form-control" id="time" required #time="ngModel"
+                                                            [(ngModel)]="model.time" name="time" >
+                                                            <span class = "help-block"
+                                                            *ngIf = "time.invalid && time.touched">Time is required
+                                                            </span>
+                                                            </div>
+                                                            <div class="from-group" [class.has-error]= "date.invalid && date.touched">
+                                                                    <label for='name'>Date:</label>
+                                                                    <input type="date" class="form-control" id="date" required #date="ngModel"
+                                                                    [(ngModel)]="model.date" name="date">
+                                                                    <span class = "help-block"
+                                                                    *ngIf = "date.invalid && date.touched">Date is required
+                                                                    </span>
+                                                                    </div>
+                    
+                                        <div class="from-group">
+                                        <label for='name'>Section</label>
+                                        <p>
+                                            <input class="radio" type="radio" required [(ngModel)]="model.section" name="section"
+                                                id="section" value="Front Office">
+                                            <label>Front Office</label></p>
+                                        <p>
+                                            <input class="radio" type="radio" required [(ngModel)]="model.section" name="section"
+                                                id="Section" value="House Keeping">
+                                            <label>House Keeping</label></p>
+                                        <p>
+                                            <p>
+                                                <input class="radio" type="radio" required [(ngModel)]="model.section" name="section"
+                                                    id="section" value="Kitchen">
+                                                <label>Kitchen</label></p>
+                                            <p>
+                                                    <input class="radio" type="radio" required [(ngModel)]="model.section" name="section"
+                                                        id="section" value="Resturant">
+                                                    <label>Resturant</label></p>
+                                            </div>
+                                                    
+                    
+                                            <div class="from-group" [class.has-error]= "position.invalid && position.touched">
+                                                    <label for='name'>Position:</label>
+                                                    <input type="text" class="form-control" id="position" required #position="ngModel"
+                                                    [(ngModel)]="model.position" name="position" >
+                                                    <span class = "help-block"
+                                                    *ngIf = "position.invalid && position.touched">Position is required
+                                                    </span>
+                                                    </div>
+                                            </div>
+                                        <br>
+                                        <div class="panel-footer">
+                                        <button type="submit" class="btn btn-success" (click)="updated()" (click)="method2()">Submit</button>
+                    
+                                            </div>
+                                            </div>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>

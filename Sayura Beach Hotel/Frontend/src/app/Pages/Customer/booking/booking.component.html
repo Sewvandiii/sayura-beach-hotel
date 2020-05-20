@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-sidebar></app-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container">
+
+                <form #booking=ngForm>
+                    <div class="panel form-panel" style="margin-top: 40px ">
+                        <div class="panel-heading">
+                            <p class="head">New Booking</p>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group" [class.has-error]="nic.invalid && nic.touched">
+                                <label for='name' class="control-lable">Customer NIC</label>
+                                <input type="text" class="form-control" id="NIC" required #nic="ngModel" [(ngModel)]="model.NIC" name="NIC">
+                                <span class="help-block"
+                                *ngIf="nic.invalid && nic.touched">
+                            NIC is required
+                            </span>
+                            </div>
+                            <div class="form-group">
+                                <label for='name'>Type</label><br>
+                                <label>Full Board</label>
+                                <input type="radio" id="type" required [(ngModel)]="model.type" name="type" value="Full board"><br>
+                                <label>Half Board</label>
+                                <input type="radio" id="type" required [(ngModel)]="model.type" name="type" value="Half board">
+                            </div>
+                            <div class="form-group">
+                                <label for='name'>Date</label>
+                    
+                                <input type="date" min="2019-10-02" class="form-control" id="fdate" placeholder="From" required [(ngModel)]="model.from_date"
+                                    name="fdate">
+                                <br>
+                                <input type="date" class="form-control" id="tdate" placeholder="To" required [(ngModel)]="model.to_date"
+                                    name="tdate">
+                            </div>
+                            <div class="form-group">
+                                <label for='name'>Number Of Guests</label>
+                                <input type="text" class="form-control" id="nguest" required [(ngModel)]="model.num_of_guests"
+                                    name="num_of_guests">
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <button type="submit" class="btn btn-success" (click)="downloadPDF()" (click)="method1()"
+                                [disabled]=!isValidForm(booking)>Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

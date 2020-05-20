@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-maintanace-sidebar></app-maintanace-sidebar>
+<app-header></app-header>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-9">
+      <div class="container">
+          <h1>Insert Equipment Center</h1>
+       
+        <form #insertequipment=ngForm>
+
+            <div class="panel form-panel" style="margin-top: 40px">
+                <div class="panel-heading">
+                    <p class="head">Insert Equipment</p>
+                </div>
+               
+
+                <div class="panel-body">
+                    <div class="from-group" [class.has-error]= "eNIC.invalid && eNIC.touched">
+          <label for='name'>Equipment Id:</label>
+          <input type="text" class="form-control" id="eNIC" required [(ngModel)]="model.eNIC" required #eNIC="ngModel" name="eNIC">
+          <span class = "help-block"
+          *ngIf = "eNIC.invalid && eNIC.touched">NIC is required
+                        </span>
+                                            </div>
+
+
+                      <div class="from-group" [class.has-error]= "edate.invalid && edate.touched">
+          <label for='name'>Date:</label>
+          <input type="date" class="form-control" id="edate" required [(ngModel)]="model.edate" required #edate="ngModel" name="edate">
+          <span class = "help-block"
+          *ngIf = "edate.invalid && edate.touched">Date is required
+                        </span>  </div>
+
+
+                        <div class="from-group" [class.has-error]= "quantity.invalid && quantity.touched">
+          <label for='name'>Quantity:</label>
+          <input type="number" class="form-control" id="quantity" required [(ngModel)]="model.equantity" required #equantity="ngModel" name="quantity">
+          <span class = "help-block"
+          *ngIf = "equantity.invalid && equantity.touched">Quantity is required
+                        </span> </div>
+
+
+                        <div class="from-group" [class.has-error]= "eprice.invalid && eprice.touched">
+          <label for='name'>Price:</label>
+          <input type="number" class="form-control" id="price" required [(ngModel)]="model.eprice" required #eprice="ngModel" name="price">
+          <span class = "help-block"
+          *ngIf = "eprice.invalid && eprice.touched">Price is required
+                        </span> </div>
+
+          <br>
+          <div class="panel-footer">
+          <button type="submit" class="btn btn-success" (click)="inserte()" (click)="downloadPDF()" (click)="method()" >Submit</button>
+          </div>
+        </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

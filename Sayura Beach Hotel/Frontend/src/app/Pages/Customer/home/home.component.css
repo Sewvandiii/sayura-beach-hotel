@@ -1,0 +1,33 @@
+/* @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css'); */
+.container{
+/* width: 100%;
+height:100%   */
+}
+
+.col-sm-9{
+  background-color: #212121;
+  width: 85%; 
+  height: 900px;
+   
+}
+h1{
+  font-family: fantasy;
+}
+label{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+form{
+  width: 80%;
+  margin-left: 200px;
+}
+.head{
+  font-size: 28px;
+  font-weight: bolder;
+  font-family: 'Times New Roman', Times, serif;
+}
+.form-panel{
+  width: 80%;
+
+}
+

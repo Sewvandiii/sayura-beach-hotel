@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-maintanace-sidebar></app-maintanace-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container">
+                    <h1>Delete Equipment Center</h1>
+                    <form #deleteequipment=ngForm>
+                        
+                                         
+                            <div class="panel form-panel" style="margin-top: 40px">
+                                    <div class="panel-heading">
+                                        <p class="head">Delete Equipment</p>
+                                    </div>
+                                   
+                
+                                    <div class="panel-body">
+                                                    <div class="from-group" [class.has-error]= "NIC.invalid && NIC.touched"></div>
+                                    <label for='name'>Equipment Id:</label>
+                                    <input type="text" class="form-control" id="NIC"
+                                    required #NIC="ngModel"
+                                    [(ngModel)]="model.NIC" name="NIC">
+                                    <span class = "help-block"
+                                    *ngIf = "NIC.invalid && NIC.touched">NIC is required
+                                    </span>
+                                                        </div>    
+                               
+<br>
+                        <div class="panel-footer">
+                            <button type="submit" (click)="method()" (click)="deletee" class="btn btn-success" >Submit</button>
+                        </div>
+                    </div>
+                                
+                </form>
+            </div>
+</div>
+</div>
+</div>
+

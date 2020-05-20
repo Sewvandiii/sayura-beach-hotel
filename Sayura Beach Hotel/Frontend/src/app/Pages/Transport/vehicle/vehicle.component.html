@@ -1,0 +1,134 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-transport-sidebar></app-transport-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+                <div class="col-sm-9">
+                <div class="container">
+                        <h1>Add vehicle</h1>
+
+                        <div id="error"></div>
+                        <form #newCustomer=ngForm action="/" method="GET">
+
+                            <div class="form-group" [class.has-error]="id.invalid && id.touched">
+                                <label for='name'>Vehicle Id</label>
+                                <input type="text" placeholder="Ex: V001" maxlength= "4" class="form-control" id="id" 
+                                ng-model="myInput" required #id="ngModel" 
+                                [(ngModel)]="model.id" name="id" onchange="addvehicle();">
+                                <span class="help-block"
+                                *ngIf="id.invalid && id.touched">Id is required</span>
+                            </div>
+                        
+                            
+                            <div class="form-group" [class.has-error]="vehicle.invalid && vehicle.touched">
+                                <div class="select-field valid">
+                                <label for='name'>Make</label>
+                                <select id = "vehicle"  name="vehicle" onchange="addvehicle();"
+                                ng-model="myInput" required  #vehicle="ngModel"
+                                [(ngModel)]="model.vehicle" (change)="populateSelect($event.target.value)" 
+                                class="form-control" >
+                                  <option value="" disabled="" selected="">Choose</option>
+                                  <option *ngFor="let make of makes" value={{make.value}}>{{make.text}}</option>
+                                </select>
+                                </div>
+                                <span class="help-block"
+                                *ngIf="vehicle.invalid && vehicle.touched">Vehicle make is required</span>
+                            </div>
+                                
+                                
+                            <div class="form-group" [class.has-error]="mod.invalid && mod.touched">
+                                <div class="select-field invalid">
+                                <label for='name'>Vehicle Model</label>
+                                <select id = "mod" name="mod" onchange="addvehicle();"
+                                ng-model="myInput" required  #mod="ngModel"
+                                [(ngModel)]="model.mod" class="form-control" >
+                                        <option value="" disabled="" selected="">Choose</option>
+                                        <option *ngFor="let vehicle of vehicles" value={{vehicle.value}}>{{vehicle.text}}</option>
+                                </select>
+                                </div>
+                                <span class="help-block"
+                                *ngIf="mod.invalid && mod.touched">Vehicle model is required</span>
+                            </div>   
+
+                                
+                            <div class="form-group" [class.has-error]="license.invalid && license.touched">
+                                <label for='name'>License Plate</label>
+                                <input type="text" placeholder="Vehicle license plate no" class="form-control" id="license"
+                                ng-model="myInput" required #license="ngModel"
+                                [(ngModel)]="model.license" name="license" onchange="addvehicle();">
+                                <span class="help-block"
+                                *ngIf="license.invalid && license.touched">License plate no is required</span>
+                            </div>
+
+                                
+                            <div class="form-group" [class.has-error]="passengers.invalid && passengers.touched">
+                                <label for='name'>Max passengers</label>
+                                <input type="number" placeholder="Enter only numbers" class="form-control" id="passengers"
+                                ng-model="myInput" required #passengers="ngModel" min="2" max="20"
+                                [(ngModel)]="model.passengers" name="passengers" onchange="addvehicle();">
+                                <span class="help-block"
+                                *ngIf="passengers.invalid && passengers.touched">No of passengers is required</span>
+                            </div>   
+                    
+                                ​
+                            <div class="form-group" [class.has-error]="year.invalid && year.touched">  
+                                <label for='name'>Manufacture Year</label>
+                                <select type="text" class="form-control" id="year"
+                                ng-model="myInput" required #year="ngModel"
+                                [(ngModel)]="model.year" name="year" onchange="addvehicle();">
+                                <option value="1989">1989</option>
+                                <option value="1990">1990</option>
+                                <option value="1991">1991</option>
+                                <option value="1992">1992</option>
+                                <option value="1993">1993</option>
+                                <option value="1994">1994</option>
+                                <option value="1995">1995</option>
+                                <option value="1996">1996</option>
+                                <option value="1997">1997</option>
+                                <option value="1998">1998</option>
+                                <option value="1999">1999</option>
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
+                                <option value="2005">2005</option>
+                                <option value="2006">2006</option>
+                                <option value="2007">2007</option>
+                                <option value="2008">2008</option>
+                                <option value="2009">2009</option>
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                </select>
+                                <span class="help-block"
+                                *ngIf="year.invalid && year.touched">Manufacture year is required</span>
+                            </div>   
+                               
+
+                            <div class="form-group" [class.has-error]="colour.invalid && colour.touched">       
+                                <label for='name'>Vehicle Colour</label>
+                                <input type="text" placeholder="Enter vehicle colour" class="form-control" id="colour"
+                                ng-model="myInput" required #colour="ngModel"
+                                [(ngModel)]="model.colour" name="colour" onchange="addvehicle();">
+                                <span class="help-block"
+                                *ngIf="colour.invalid && colour.touched">Vehicle colour is required</span>
+                            </div>             
+
+                                <br>
+                            <button (click)="method1()" (click)="sweetAlertAdd1()" type="submit" (click)="downloadPDF()" id="btnAdd" class="btn btn-success" disabled="disabled">Add</button>
+                    
+                        </form>
+                    </div>
+        </div>
+    </div>
+</div>

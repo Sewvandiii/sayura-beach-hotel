@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-accounts-sidebar></app-accounts-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+
+        <div class="col-sm-9">
+            <div class="container">
+                <h1>Delete Employee Financial Details</h1>
+
+                <br>
+                <form #newEmployee=ngForm>
+
+                <div class="form-group" [class.has-error]="eid.invalid && eid.touched ">
+                                <label for='eid' class="control-lable">Employee ID</label>
+                                <input type="text" required #eid="ngModel" class="form-control" id="eid" [(ngModel)]="model.eid"
+                                    name="eid">
+                                    <span class="help-block"
+                                    *ngIf="eid.invalid && eid.touched">
+                                Employee ID is required
+                                </span>
+                </div>                  
+
+
+                </form>
+
+                <br>
+                    <button type="submit" class="btn btn-success" (click)=deletedSw() (click)= "method()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

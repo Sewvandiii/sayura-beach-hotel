@@ -1,0 +1,42 @@
+<!--p>work-emp-details works!</p-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-employee-sidebar></app-employee-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container">
+                
+                <form #newCustomer=ngForm style="width: 800px">
+                    <h1>Working Details</h1>
+                    <label for='name'>Employee ID</label>
+                    <input type="text" class="form-control" id="WId" required [(ngModel)]="model.wId" name="Wid" onchange="validateworkBtn()">
+
+                    <label for='name'>Date</label>
+                    <input type="date" class="form-control" id="WDate" required [(ngModel)]="model.wDate"
+                        name="Wdate" onchange="validateworkBtn()">
+
+                    <label for='name'>Working Time</label>
+                    <input type="text" class="form-control" id="WTime" required [(ngModel)]="model.wTime" name="Wtime" maxlength="2" onchange="validateWorkTime();">  
+
+                    <label for='name'>Working Time Status</label>
+                    <p>
+                        <input class="w3-radio" type="radio" required [(ngModel)]="model.wTimeStatus" name="wtimeStatus" id="Ftime" value="Full Time" disabled="disabled" onchange="validateworkBtn()">
+                        <label>Full Time</label></p>
+                        <p>
+                        <input class="w3-radio" type="radio" required [(ngModel)]="model.wTimeStatus" name="wtimeStatus" id="Htime" value="Half Time" disabled="disabled" onchange="validateworkBtn()">
+                        <label>Half Time</label></p>
+                        <p>
+                        <input class="w3-radio" type="radio" required [(ngModel)]="model.wTimeStatus" name="wtimeStatus" id="Otime" value="Over Time" disabled="disabled" onchange="validateworkBtn()">
+                        <label>Over Time</label></p>
+                        <p>   
+                    <br>
+                    <button (click) = "method5()" (click) = "onClickWork()" (click)="DisSuccAddW()" id="btnWork" type="submit" class="btn btn-success" disabled="disabled">Add</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

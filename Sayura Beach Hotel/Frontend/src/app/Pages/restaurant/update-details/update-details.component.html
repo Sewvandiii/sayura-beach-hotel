@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-res-side-bar></app-res-side-bar>
+<app-header></app-header>
+
+
+<div class="container-fluid">
+  <div class="row content">
+      <div class="col-sm-9">
+          <div class="container">
+
+              <form #updateresstockdetails=ngForm>
+                  <div class="panel form-panel" style="margin-top: 40px ">
+
+                      <div class="panel-body">
+                          <div class="form-group">
+                              <label for='name'>Product ID</label>
+                              <input type="text" class="form-control" id="pid" required [(ngModel)]="model.pid"
+                                  name="pid">
+                          </div>
+                      </div>
+                      <div class="panel-footer">
+                          <button type="submit" class="btn btn-success" (click)="method1()">Search</button>
+                      </div>
+                  </div>
+              </form>
+
+
+              <form #updateCustomer=ngForm>
+                <div class="panel form-panel" style="margin-top: 40px ">
+                    <div class="panel-heading">
+                        <p class="head">Update Restaurant Stock</p>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for='name'>ID</label>
+                            <input type="text" class="form-control" id="pid" required [(ngModel)]="model.pid"
+                                name="pid">
+                        </div>
+                        <div class="form-group">
+                          <label for='name'>Product Name</label>
+                          <input type="text" class="form-control" id="pname" required [(ngModel)]="model.pname"
+                              name="pname">
+                      </div>
+                      <div class="form-group">
+                          <label for='name'>Quantity</label>
+                          <input type="text" class="form-control" id="quantity" required
+                              [(ngModel)]="model.quantity" name="quantity">
+                      </div>
+                      <div class="form-group">
+
+                          <label for='name'>Price</label>
+                          <input type="text" class="form-control" id="price" required
+                              [(ngModel)]="model.price" name="price">
+                      </div>
+                      <div class="form-group">
+                        <label for="ava">Available</label>
+                        <select class="form-control">
+                            <option value="1" selected>Available</option>
+                            <option value="0" >Not Available</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="panel-footer">
+                          <button type="submit" class="btn btn-success" (click)="method2()">Update</button>
+                  </div>
+              </div>
+          </form>
+
+      </div>
+  </div>
+</div>
+</div>

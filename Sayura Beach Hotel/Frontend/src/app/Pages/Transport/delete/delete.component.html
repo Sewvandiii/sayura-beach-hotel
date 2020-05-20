@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-transport-sidebar></app-transport-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+                <div class="col-sm-9">
+                <div class="container">
+                        <h1>Delete vehicle</h1>
+                        <form #newCustomer=ngForm>
+
+                        <div class="form-group" [class.has-error]="id.invalid && id.touched">
+                            <label for='name'>Vehicle ID</label>
+                            <input type="text" class="form-control" id="id" required #id="ngModel"
+                            [(ngModel)]="model2.id" name="id" onchange="validatedelete();">
+                            <span class="help-block"
+                                *ngIf="id.invalid && id.touched">Vehicle id is required</span>
+                        </div>    
+        <br>
+                            <button type="submit" class="btn btn-success" (click)="method2()" (click)="sweetAlertDelete()" id="btnDEL" disabled="disabled" >Delete</button>
+
+                            
+        
+                        </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>     
+

@@ -1,0 +1,103 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-inventroy-side-bar></app-inventroy-side-bar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container">
+
+                <form #updateStocks=ngForm>
+                    <div class="panel form-panel" style="margin-top: 40px ">
+                        <div class="panel-heading">
+                            <p class="head">View Stock Details</p>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for='name'>Supplier NIC</label>
+                                <input type="text" class="form-control" id="nic" required [(ngModel)]="model.supNIC"
+                                    name="nic">
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <button type="submit" class="btn btn-success" (click)="method1()" [disabled]=!isValidForm(updateStocks)>View</button>
+                        </div>
+                    </div>
+                </form>
+
+
+                <form #updateStock=ngForm>
+                    <div class="panel form-panel" style="margin-top: 40px ">
+                        <div class="panel-heading">
+                            <p class="head">Update Stock</p>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group" [class.has-error]="supNIC.invalid && supNIC.touched">
+                                        <label for='NIC'>Supplier NIC</label>
+                                        <input type="text" class="form-control" id="supNIC" required #supNIC="ngModel"
+                                        [(ngModel)]="model.supNIC" name="supNIC" placeholder="Enter NIC" onchange="valdatesupp();">
+                                        <span class = "help-block"
+                                        *ngIf = "supNIC.invalid && supNIC.touched">Supplier NIC is required</span>
+                                         </div>
+
+                           <!-- <div class="form-group" [class.has-error]="supname.invalid && supname.touched">
+                                        <label for='name'>Supplier Name</label>
+                                         <input type="text" class="form-control" id="supname" required #supname="ngModel"
+                                         [(ngModel)]="model.supname" name="supname" placeholder="Enter name" onchange="valdatesupp();">
+                                         <span class = "help-block"
+                                        *ngIf = "supname.invalid && supname.touched">Supplier Name is required</span>
+                                         </div> -->
+
+                            <div class="form-group" [class.has-error]="supcontactNo.invalid && supcontactNo.touched">
+                                        <label for='contactNo'>Supplier contactNo</label>
+                                        <input type="text" class="form-control" id="contactNo" required #supcontactNo="ngModel"
+                                        [(ngModel)]="model.supcontactNo" name="supcontactNo" placeholder="Enter contact number" onchange="valdatesupp();">
+                                         <span class = "help-block"
+                                         *ngIf = "supcontactNo.invalid && supcontactNo.touched">Supplier contact number is required</span>
+                                         </div>
+
+                            <div class="form-group" [class.has-error]="supcategory.invalid && supcategory.touched">
+                                       <label for='supcategory'>Supplier category</label>
+                                       <input type="text" class="form-control" id="supcategory" required #supcategory="ngModel"
+                                       [(ngModel)]="model.supcategory" name="supcategory" placeholder="Enter category" onchange="valdatesupp();">
+                                       <span class = "help-block"
+                                        *ngIf = "supcategory.invalid && supcategory.touched">Supplier category is required</span>
+                                         </div> 
+                            
+                            <div class="form-group" [class.has-error]="quantity.invalid && quantity.touched">
+                                     <label for='name'>Quantity</label>
+                                     <input type="text" class="form-control" id="quantity" required #quantity="ngModel"
+                                     [(ngModel)]="model.quantity" name="quantity" placeholder="Enter quantity" onchange="valdatesupp();">
+                                     <span class = "help-block"
+                                      *ngIf = "quantity.invalid && quantity.touched">Supplier quantity is required</span>
+                                       </div> 
+                          
+                            <div class="form-group" [class.has-error]="orderedDate.invalid && orderedDate.touched">
+                                    <label for='name'>Ordered date</label>
+                                    <input type="text" class="form-control" id="orderedDate" required #orderedDate="ngModel"
+                                    [(ngModel)]="model.orderedDate" name="orderedDate" placeholder="Enter the ordered date" onchange="valdatesupp();">
+                                    <span class = "help-block"
+                                     *ngIf = "orderedDate.invalid && orderedDate.touched">Ordered date is required</span>
+                                     </div> 
+                                 
+
+                           <div class="form-group" [class.has-error]="purchasedDate.invalid && purchasedDate.touched">
+                                    <label for='name'>Purchased date</label>
+                                    <input type="text" class="form-control" id="purchasedDate" required #purchasedDate="ngModel"
+                                    [(ngModel)]="model.purchasedDate" name="purchasedDate" placeholder="Enter the purchased date" onchange="valdatesupp();">
+                                    <span class = "help-block"
+                                    *ngIf = "purchasedDate.invalid && purchasedDate.touched">Purchased date is required</span>
+                                    </div> 
+                                         
+                        </div>
+                        <div class="panel-footer">
+                                <button type="submit" class="btn btn-success" (click)="method2()" (click)="DisSuccStockUp()">Update</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<!--p>view-emp-details works!</p-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-employee-sidebar></app-employee-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container">
+                <h1>View Employee</h1>
+                <form #newCustomer=ngForm style="width: 800px">
+                    <label for='name'>Employee ID</label>
+                    <input type="text" class="form-control" id="VwId" required [(ngModel)]="model.VwId" name="VwId">
+
+                    <br>
+                    <button  (click)="method7()" type="submit" class="btn btn-info">View</button>
+
+                </form>
+            </div>
+            <h2>Employee Details <button  (click)="onClick()"  id="btnPrint" type="submit" class="btn btn-primary" style="margin-left: 1000px; ">Print</button></h2>
+            
+<table>
+  <tr>
+    <th style="width: 10%">ID</th>
+    <th style="width: 15%">Name</th>
+    <th style="width: 15%">NIC</th>
+    <th style="width: 15%">Age</th>
+    <th style="width: 15%">Birth Day</th>
+    <th style="width: 15%">Mobile</th>
+    <th style="width: 15%">Joined Date</th>
+  </tr>
+  <tr>
+      <th style="width: 10%"><input disabled="text" class="form-control" id="vId" required [(ngModel)]="model2.vId" name="vid" ></th>
+      <th style="width: 15%"><input disabled="text" class="form-control" id="vName" required [(ngModel)]="model2.vName" name="vName" ></th>
+      <th style="width: 15%"><input disabled="text" class="form-control" id="vNic" required [(ngModel)]="model2.vNic" name="vNic" ></th>
+      <th style="width: 15%"><input disabled="text" class="form-control" id="vAge" required [(ngModel)]="model2.vAge" name="vAge" ></th>
+      <th style="width: 15%"><input disabled="text" class="form-control" id="vBirth" required [(ngModel)]="model2.vBirth" name="vBirth" ></th>
+      <th style="width: 15%"><input disabled="text" class="form-control" id="vMobile" required [(ngModel)]="model2.vMobile" name="vMobile" ></th>
+      <th style="width: 15%"><input disabled="text" class="form-control" id="vJoin" required [(ngModel)]="model2.vJoin" name="vJoin" ></th>
+      
+  </tr>
+</table>
+<table>
+  <tr>  
+    <th style="width: 15%">Position</th>
+    <th style="width: 15%">Password</th>
+    <th style="width: 15%">Gender</th>
+    <th style="width: 15%">Married Status</th>
+  </tr>
+  <tr>
+    <th style="width: 15%"><input disabled="text" class="form-control" id="vPosi" required [(ngModel)]="model2.vPosi" name="vPosi" ></th>
+    <th style="width: 15%"><input disabled="text" class="form-control" id="vPass" required [(ngModel)]="model2.vPass" name="vPass" ></th>
+    <th style="width: 15%"><input disabled="text" class="form-control" id="vGender" required [(ngModel)]="model2.vGender" name="vGender" ></th>
+    <th style="width: 15%"><input disabled="text" class="form-control" id="vMarry" required [(ngModel)]="model2.vMarry" name="vMarry" ></th>
+  </tr>
+ </table>
+
+ 
+
+
+        </div>
+    </div>
+</div>

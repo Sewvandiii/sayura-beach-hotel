@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-inventroy-side-bar></app-inventroy-side-bar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container">
+                <h1>Add Supplier</h1>
+                <form #addSupplier=ngForm>
+
+        <div class="form-group" [class.has-error]="supname.invalid && supname.touched">
+        <label for='name'>Supplier Name</label>
+        <input type="text" class="form-control" id="supname" required #supname="ngModel"
+        [(ngModel)]="model.supname" name="supname" placeholder="Enter name" onchange="valdatesupp();">
+        <span class = "help-block"
+        *ngIf = "supname.invalid && supname.touched">Supplier Name is required</span>
+         </div>
+         
+         <div class="form-group" [class.has-error]="supNIC.invalid && supNIC.touched">
+        <label for='NIC'>Supplier NIC</label>
+        <input type="text" class="form-control" id="supNIC" required #supNIC="ngModel"
+        [(ngModel)]="model.supNIC" name="supNIC" placeholder="Enter NIC" onchange="valdatesupp();">
+        <span class = "help-block"
+        *ngIf = "supNIC.invalid && supNIC.touched">Supplier NIC is required</span>
+         </div>
+
+         <div class="form-group" [class.has-error]="supaddress.invalid && supaddress.touched">
+        <label for='Address'>Supplier Address</label>
+        <input type="text" class="form-control" id="address" required #supaddress="ngModel"
+        [(ngModel)]="model.address" name="supaddress" placeholder="Enter name" onchange="valdatesupp();">
+        <span class = "help-block"
+        *ngIf = "supaddress.invalid && supaddress.touched">Supplier address is required</span>
+         </div>
+
+         <div class="form-group" [class.has-error]="supemail.invalid && supemail.touched">
+        <label for='Email'>Supplier Email</label>
+        <input type="text" class="form-control" id="email" required #supemail="ngModel"
+        [(ngModel)]="model.email" name="supemail" placeholder="Enter email" onchange="valdatesupp();">
+        <span class = "help-block"
+        *ngIf = "supemail.invalid && supemail.touched">Supplier address is required</span>
+         </div>
+
+         <div class="form-group" [class.has-error]="supcontactNo.invalid && supcontactNo.touched">
+        <label for='contactNo'>Supplier contactNo</label>
+        <input type="text" class="form-control" id="contactNo" required #supcontactNo="ngModel"
+        [(ngModel)]="model.contactNo" name="supcontactNo" placeholder="Enter contact number" onchange="valdatesupp();">
+        <span class = "help-block"
+        *ngIf = "supcontactNo.invalid && supcontactNo.touched">Supplier contact number is required</span>
+         </div>
+
+         <div class="form-group" [class.has-error]="supcategory.invalid && supcategory.touched">
+        <label for='supcategory'>Supplier category</label>
+        <input type="text" class="form-control" id="supcategory" required #supcategory="ngModel"
+        [(ngModel)]="model.supcategory" name="supcategory" placeholder="Enter category" onchange="valdatesupp();">
+        <span class = "help-block"
+        *ngIf = "supcategory.invalid && supcategory.touched">Supplier category is required</span>
+         </div>
+         <div class="form-group" [class.has-error]="description.invalid && description.touched">
+            <label for='description'>Description</label>
+            <input type="text" class="form-control" id="description" required #description="ngModel"
+            [(ngModel)]="model.description" name="description" placeholder="Enter description" onchange="valdatesupp();">
+            <span class = "help-block"
+            *ngIf = "description.invalid && description.touched">Description is required</span>
+             </div>
+<!--         
+            <label for="category">Select Category</label>
+            <select class="form-control" id="supcategory" required [(ngModel)]="model.supcategory">
+                <option value=1>Vegetables</option>
+                <option value=2>Fruits</option>
+                <option value=3>Meat</option>
+                <option value=4>Beverages</option>
+                <option value=5>Spices</option>
+                <option value=6>Maintainance Appliances</option>
+                <option value=7>Kitchen Appliances</option>
+              </select>
+            
+            <label for='description'>Description</label>
+        <input type="text" class="form-control" id="description"required [(ngModel)]="model.description"name="description" placeholder="Enter a description">
+
+        <br> -->
+
+
+                    <button type="submit" class="btn btn-success" (click)="method1()" id="btnsup" (click)="onClickInsertSupplier()">Submit</button>
+
+      
+      </form>
+
+        
+      

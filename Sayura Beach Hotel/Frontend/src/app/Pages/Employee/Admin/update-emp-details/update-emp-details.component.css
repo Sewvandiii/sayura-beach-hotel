@@ -1,0 +1,58 @@
+.container-1{
+  width: 900px;
+  height:1000px ; 
+  background-color: white; 
+  margin-top: 50px;
+  border-radius: 1%;
+  margin-left: 100px;
+}
+
+   
+   .col-sm-9{
+     background-color: #212121;
+     width: 85%; 
+     height: 1100px;
+      
+   }
+   .update{
+    margin-top: 150px;
+    
+   }
+   .age{
+    margin: 156px 0px 0px 0px;/*newly added*/
+  } 
+  .birth{
+    margin-top: -500px;/*newly added*/
+  }
+  .form-row{
+    margin-top: 40px;
+  }
+  .form-row-1{
+    margin-top: 290px;/*newly added*/
+  }
+  .form-row-2{
+    margin-top: 410px;/*newly added*/
+  }
+  .gender{
+    margin-top: 530px;/*newly added*/
+  }
+  
+   h1{
+     font-family: Arial, Helvetica, sans-serif;
+   }
+   label{
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 16px;
+   }
+   form{
+     width: 80%;
+     margin-left: 45px;
+     margin-top: 50px;
+   }
+   .head{
+     font-size: 24px;
+   }
+   .form-panel{
+     width: 80%;
+   
+   }

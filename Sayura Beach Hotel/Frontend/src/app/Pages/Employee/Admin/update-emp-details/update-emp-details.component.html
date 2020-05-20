@@ -1,0 +1,134 @@
+<!--p>update-emp-details works!</p-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-employee-sidebar></app-employee-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container-1">
+                
+                <form #newCustomer=ngForm style="width: 800px">
+                    <h1>Update Employee</h1>
+                    <div class="form-group" [class.has-error]="EempId.invalid && EempId.touched">
+                    <label for='name'>Employee ID</label>
+                    <input type="text" class="form-control" id="Eid" required #EempId="ngModel" [(ngModel)]="model.id" name="EempId" onchange="validateEditBtn();">
+                    <span class="help-block"
+                    *ngIf="EempId.invalid && EempId.touched">Employee ID is required</span>
+                </div>
+                    <br>
+                    <button (click)=" method3()"   (click)="onClickE()" id="btnEdit" type="submit" class="btn btn-info" disabled="disabled">Edit</button>
+
+                <!-- </form> -->
+              
+                <!-- <div class="update">  -->
+                <!-- <form  #newCustomer=ngForm style="width: 800px"> -->
+                <div class="form-row"> 
+                    <div class="form-group col-md-4">
+                    <div class="form-group" [class.has-error]="Uid.invalid && Uid.touched">
+                    <label for='name'>Employee ID</label>
+                    <input type="text" class="form-control" id="UempId" required #Uid="ngModel" [(ngModel)]="model2.id" name="Uid" value="user.id" onchange="validateUpdateBtn();">
+                    <span class="help-block"
+                    *ngIf="Uid.invalid && Uid.touched">Employee ID is required</span>
+                </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                    <div class="form-group" [class.has-error]="Uname.invalid && Uname.touched">
+                    <label for='name'>Employee Name</label>
+                    <input type="text" class="form-control" id="UempName" required #Uname="ngModel" [(ngModel)]="model2.name" name="Uname" value="user.name" onchange="validateUpdateBtn();">
+                    <span class="help-block"
+                    *ngIf="Uname.invalid && Uname.touched">Employee name is required</span>
+                </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                    <div class="form-group" [class.has-error]="Unic.invalid && Unic.touched">
+                    <label for='name'>NIC or Passport</label>
+                    <input type="text" class="form-control" id="Unic" required #Unic="ngModel" [(ngModel)]="model2.NIC" name="Unic" value="user.nic" onchange="validateUpdateBtn();">
+                    <span class="help-block"
+                    *ngIf="Unic.invalid && Unic.touched">Employee NIC/passport is required</span>
+                </div>
+                    </div>
+                </div>
+                <div class="age">
+                    <div class="form-group col-md-2" [class.has-error]="Uage.invalid && Uage.touched">
+                    <label for='name'>Age</label> 
+                    <input type="text" class="form-control" id="UempAge" required #Uage="ngModel" [(ngModel)]="model2.age" name="Uage" value="user.age" onchange="validateUpdateBtn();">
+                    <span class="help-block"
+                    *ngIf="Uage.invalid && Uage.touched">Employee age is required</span>
+                </div>
+            
+                </div>
+
+                <div class="form-row-1">
+                    <div class="form-group col-md-4">
+                    <div class="form-group" [class.has-error]="UBdate.invalid && UBdate.touched">
+                    <label for='name'>Birth Date</label>
+                    <input type="date" class="form-control" id="UempBirth" required #UBdate="ngModel" [(ngModel)]="model2.Bdate" name="UBdate" value="user.Bdate" onchange="validateUpdateBtn();">
+                    <span class="help-block"
+                    *ngIf="UBdate.invalid && UBdate.touched">Employee birth day is required</span>
+                </div>
+                   </div> 
+                    <div class="form-group col-md-4"> 
+                    <div class="form-group" [class.has-error]="Umobile.invalid && Umobile.touched">
+                    <label for='name'>Mobile</label>
+                    <input type="text" class="form-control" id="UempMob" required #Umobile="ngModel" [(ngModel)]="model2.mobile" name="Umobile" value="user.mobile" onchange="validateUpdateBtn();">
+                    <span class="help-block"
+                    *ngIf="Umobile.invalid && Umobile.touched">Employee mobile is required</span>
+                </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                    <div class="form-group" [class.has-error]="UJdate.invalid && UJdate.touched">
+                    <label for='name'>Joined Date</label>
+                    <input type="date" class="form-control" id="UempJd" required #UJdate="ngModel" [(ngModel)]="model2.Jdate" name="UJdate" value="user.Jdate" onchange="validateUpdateBtn();">
+                    <span class="help-block"
+                    *ngIf="UJdate.invalid && UJdate.touched">Employee joined date is required</span>
+                </div>
+                    </div>
+                </div>
+
+                <div class="form-row-2">
+                    <div class="form-group col-md-6">
+                    <div class="form-group" [class.has-error]="UPosition.invalid && UPosition.touched">
+                    <label for='name'>Position</label>
+                    <input type="text" class="form-control" id="UempPos" required #UPosition="ngModel" [(ngModel)]="model2.Position" name="UPosition" value="user.position" onchange="validateUpdateBtn();">
+                    <span class="help-block"
+                    *ngIf="UPosition.invalid && UPosition.touched">Employee position is required</span>
+                </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                    <div class="form-group" [class.has-error]="UPassword.invalid && UPassword.touched">
+                    <label for='name'>Password</label>
+                    <input type="password" class="form-control" id="UempPass" required #UPassword="ngModel" [(ngModel)]="model2.Password" name="UPassword" value="user.password" onchange="validateUpdateBtn();">
+                    <span class="help-block"
+                    *ngIf="UPassword.invalid && UPassword.touched">Employee password is required</span>
+                </div>
+                    </div>
+                </div>
+                <div class="gender">
+                    <label for='name'>Gender</label>
+                    <p>
+                        <input class="w3-radio" type="radio" required [(ngModel)]="model2.gender" name="gender" id="UgenderM" value="Male" onchange="validateUpdateBtn();">
+                        <label>Male</label></p>
+                        <p>
+                        <input class="w3-radio" type="radio" required [(ngModel)]="model2.gender" name="gender" id="UgenderF" value="Female" onchange="validateUpdateBtn();">
+                        <label>Female</label></p>
+                        <p>
+                    </div>
+                    <label for='name'>Married Status</label>
+                    <p>
+                        <input class="w3-radio" type="radio"  required [(ngModel)]="model2.marry" name="marry" id="Upmarry" value="Marry" onchange="validateUpdateBtn();">
+                        <label>Married</label></p>
+                        <p>
+                        <input class="w3-radio" type="radio"  required [(ngModel)]="model2.marry" name="marry" id="UpUnmarry" value="Unmarry" onchange="validateUpdateBtn();">
+                        <label>Unmarried</label></p>
+                        <p>        
+                    <br>
+                    <button (click)="onClickU()" (click)="method5()" (click)="DisSuccUpdate()" id="btnUpdate" type="submit" class="btn btn-success" disabled="disabled">Update</button>
+                
+                </form>
+             <!-- </div>  -->
+            </div>
+        </div>
+    </div>
+</div>

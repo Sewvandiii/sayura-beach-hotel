@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<app-sidebar></app-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9">
+            <form #newCustomer=ngForm>
+                <div class="panel form-panel" style="margin-top: 40px ">
+                    <div class="panel-heading">
+                        <p class="head">New customer</p>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group" [class.has-error]="name.invalid && name.touched ">
+                            <label for='name' class="control-lable">Customer Name</label>
+                            <input type="text" required #name="ngModel" class="form-control" id="name" [(ngModel)]="model.name"
+                                name="name">
+                                <span class="help-block"
+                                *ngIf="name.invalid && name.touched">
+                            Name is required
+                            </span>
+                        </div>
+
+                        <div class="form-group" [class.has-error]="address.invalid && address.touched ">
+                            <label for='name' class="control-lable">Address</label>
+                            <input type="text" class="form-control" id="address" required #address="ngModel" [(ngModel)]="model.address"
+                                name="address">
+                                <span class="help-block"
+                                *ngIf="address.invalid && address.touched">
+                            Address is required
+                            </span>
+                        </div>
+                        <div class="form-group" [class.has-error]="nic.invalid && nic.touched ">
+                            <label for='name' class="control-lable">NIC or Passport</label>
+                            <input type="text" minlength="8" class="form-control" id="nic" required #nic="ngModel" [(ngModel)]="model.NIC"
+                                name="nic">
+                                
+                                <span class="help-block"
+                                     *ngIf="nic.minlength">
+                                    </span>
+                                <span class="help-block"
+                                *ngIf="nic.invalid && nic.touched">
+                            NIC is required
+                            </span>
+                        </div>
+
+
+                        <div class="form-group" [class.has-error]="telephone.invalid && telephone.touched ">
+                            <label for='name' class="control-lable">Telephone</label>
+                            <input type="text" minlength="10" ng-minlength=10 ng-maxlength=12 class="form-control" id="telephone" required #telephone="ngModel"
+                                [(ngModel)]="model.telephone" name="telephone">
+                                <span class="help-block"
+                                *ngIf="telephone.minlength">
+                               </span>
+                                <span class="help-block"
+                                *ngIf="telephone.invalid && telephone.touched">
+                            Telephone is required
+                            </span>
+                        </div>
+
+                        <div class="form-group" [class.has-error]="email.invalid && email.touched ">
+                            <label for='name' class="control-lable">E-mail</label>
+                            <input type="email" class="form-control" id="email" required email #email="ngModel" [(ngModel)]="model.email"
+                                name="email">
+                                <span class="help-block"
+                                *ngIf="email.invalid && email.touched">
+                            Email is required
+                            </span>
+                            <span class="help-block"
+                            *ngIf="email.invalid && email.touched">
+                        Email is invalid
+                        </span>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <input type="submit" class="btn btn-success" (click)="method1()" (click)="downloadPDF()" value="Submit" [disabled]=!isValidForm(newCustomer)>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-inventroy-side-bar></app-inventroy-side-bar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-9">
+            <div class="container">
+                <h1>Delete Supplier</h1>
+                <form #deleteSupplier=ngForm>
+
+                    <label for='name'>Supplier NIC</label>
+                    <input type="text" class="form-control" id="nic" required [(ngModel)]="model.NIC" name="nic">
+            
+                    <br>
+                    
+                    <button type="dlete" class="btn btn-success" (click)="method1()" (click)="DisDelSupAlert()" (click)="onclickdeletesuplierdetails()">Delete</button>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

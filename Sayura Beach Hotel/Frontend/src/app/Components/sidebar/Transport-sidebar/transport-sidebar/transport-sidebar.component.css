@@ -1,0 +1,33 @@
+.col-sm-3{
+    background-color: #000000;
+    height: 990px;
+    width: 15%;
+}
+
+h4{
+    font-family: fantasy;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+.nav-pills{ 
+    font-size: 14px; 
+}
+li{
+    height: 30px;
+    text-align: center;
+    color: #9E9E9E;
+    /* background-color: ; */
+}
+li:hover{
+    background-color: saddlebrown;    
+}
+a{
+    color: white;
+}
+.sidelogo{
+    background-color: white;
+    border-radius: 5%;
+    margin-top: 10px;
+}
+

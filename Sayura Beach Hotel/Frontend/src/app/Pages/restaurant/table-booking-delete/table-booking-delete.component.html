@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-res-side-bar></app-res-side-bar>
+<app-header></app-header>
+
+
+<div class="container-fluid">
+  <div class="row content">
+      <div class="col-sm-9">
+          <div class="container">
+              <form #deletecustomer=ngForm>
+                  <div class="panel form-panel" style="margin-top: 40px ">
+                      <div class="panel-heading">
+                          <p class="head">Delete Booking Details</p>
+                      </div>
+                      <div class="panel-body">
+                          <div class="form-group">
+
+                              <label for='name'>Table Number</label>
+                              <input type="text" class="form-control" id="tn" required [(ngModel)]="model.tn"
+                                  name="tn">
+                          </div>
+
+                      </div>
+                      <div class="panel-footer">
+                          <button type="submit" class="btn btn-success" (click)="method1()" (click)="showmodel()" [disabled]=!isValidForm(deletedetails) >Submit</button>
+                      </div>
+
+          </div>
+      </form>
+      </div>
+  </div>
+</div>
+</div>

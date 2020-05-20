@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-accounts-sidebar></app-accounts-sidebar>
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row content">
+
+        <div class="col-sm-9">
+            <div class="container">
+                <h1>New Employee Financial Details</h1>
+
+                <br>
+                <form #addEmployeeDetail=ngForm>
+
+                        <div class="form-group" [class.has-error]="eid.invalid && eid.touched ">
+                                <label for='eid' class="control-lable">Employee ID</label>
+                                <input type="text" required #eid="ngModel" class="form-control" id="eid" [(ngModel)]="model.eid"
+                                    name="eid">
+                                    <span class="help-block"
+                                    *ngIf="eid.invalid && eid.touched">
+                                Employee ID is required
+                                </span>
+                            </div>
+
+                            <div class="form-group" [class.has-error]="salary.invalid && salary.touched ">
+                                    <label for='salary' class="control-lable">Salary</label>
+                                    <input type="number" required #salary="ngModel" class="form-control" id="salary" [(ngModel)]="model.salary"
+                                        name="salary">
+                                        <span class="help-block"
+                                        *ngIf="salary.invalid && salary.touched">
+                                    Salary is required
+                                    </span>
+                                </div>
+
+                        
+                                <div class="form-group" [class.has-error]="bonus.invalid && bonus.touched ">
+                                        <label for='bonus' class="control-lable">Bonus</label>
+                                        <input type="number" required #bonus="ngModel" class="form-control" id="bonus" [(ngModel)]="model.bonus"
+                                            name="bonus">
+                                            <span class="help-block"
+                                            *ngIf="bonus.invalid && bonus.touched">
+                                        Bonus is required
+                                        </span>
+                                    </div>
+        
+                                    <div class="form-group" [class.has-error]="loan.invalid && loan.touched ">
+                                            <label for='loan' class="control-lable">Loan</label>
+                                            <input type="number" required #loan="ngModel" class="form-control" id="loan" [(ngModel)]="model.loan"
+                                                name="loan">
+                                                <span class="help-block"
+                                                *ngIf="loan.invalid && loan.touched">
+                                            Loan is required
+                                            </span>
+                                        </div>
+    
+
+                        
+
+
+                </form>
+
+                <br>
+                    <button (click)="method()" (click)="addedSw()" (click)="downloadPDF()" type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+

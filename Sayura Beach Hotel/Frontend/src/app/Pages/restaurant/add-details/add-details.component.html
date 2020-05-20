@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-res-side-bar></app-res-side-bar>
+<app-header></app-header>
+
+<div class="container-fluid">
+  <div class="row content ">
+      <div class="col-sm-9">
+          <div class="container">
+              <h1>Add New Stock</h1>
+              <br><br>
+              <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+
+                  <div class="form-group">
+                  <label for='pid'>Product Id</label>
+                  <input type="text"  class="form-control" id="pid" #pid="ngModel" required [(ngModel)]="model.pid" name="pid" [ngClass]="{ 'is-invalid': f.submitted && pid.invalid }" />
+                  <div *ngIf="f.submitted ||pid.touched && pid.invalid" class="invalid-feedback">
+                      <div *ngIf="pid.invalid">Product ID is required</div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                  <label for='pname'>Product Name</label>
+                  <input type="text" class="form-control" id="pname" #pname="ngModel" required [(ngModel)]="model.pname" name="pname" [ngClass]="{ 'is-invalid': f.submitted && pname.invalid }"  >
+                  <div *ngIf="f.submitted ||pname.touched && pname.invalid" class="invalid-feedback">
+                      <div *ngIf="pname.invalid">Product Name is required</div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                  <label for='quantity'>Quantity</label>
+                  <input type="text" class="form-control" id="quantity" #quantity="ngModel" required [(ngModel)]="model.quantity" name="quantity" [ngClass]="{ 'is-invalid': f.submitted && quantity.invalid }" >
+                  <div *ngIf="f.submitted ||quantity.touched && quantity.invalid" class="invalid-feedback">
+                      <div *ngIf="quantity.invalid">Quantity is required</div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                  <label for='price'>Price</label>
+                  <input type="text" class="form-control" id="price" #price="ngModel" required [(ngModel)]="model.price" name="price" [ngClass]="{ 'is-invalid': f.submitted && price.invalid }" >
+                  <div *ngIf="f.submitted ||price.touched && price.invalid" class="invalid-feedback">
+                      <div *ngIf="price.invalid">Price is required</div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="ava">Available</label>
+                      <select class="form-control" id="ava"  (change)="handleAvailableChange($event)">
+                          <option value="1" selected>Available</option>
+                          <option value="0" >Not Available</option>
+                      </select>
+                  </div>
+                  <button  type="submit" class="btn btn-success" (click)="downloadPDF()" >ADD</button>
+              </form>
+
+          </div>
+      </div>
+  </div>
+</div>
+
+
+

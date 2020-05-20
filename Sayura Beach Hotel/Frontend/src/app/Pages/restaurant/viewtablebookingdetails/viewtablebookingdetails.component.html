@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<app-res-side-bar></app-res-side-bar>
+<app-header></app-header>
+
+
+<div class="container-fluid">
+  <div class="row content ">
+    <div class="col-sm-9">
+      <div class="container">
+        <h1>Booking details</h1>
+        <br>
+        <div class="container">
+          <table class="table table-trapped">
+
+            <thead>
+              <tr>
+                <th>Table Number</th>
+                <th>Number Of Chairs</th>
+                <th>Booking Date</th>
+                <th>Price</th>
+                <th>Available/Not Available</th>
+                <th><button type="submit" class="btn btn-success" (click)='method1()'>View</button></th>
+              </tr>
+            </thead>
+            <br>
+            <tbody>
+              <tr *ngFor="let row of model">
+                  <td>
+                      <input disabled="text" class="form-control" id="tn" required value={{row.tn}} name="tn">
+                    </td>
+                    <td>
+                      <input disabled="text" class="form-control" id="nc" required value={{row.nc}}
+                        name="nc">
+
+                    </td>
+
+                    <td>
+                      <input disabled="text" class="form-control" id="bd" required value={{row.bd}}
+                        name="bd"></td>
+
+                    <td>
+                      <input disabled="text" class="form-control" id="price" required value={{row.price}}
+                        name="price"></td>
+
+                    <td>
+                      <input disabled="text" class="form-control" id="ava" required value={{row.ava}} name="ava"></td>
+              </tr>
+            </tbody>
+
+              </table>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

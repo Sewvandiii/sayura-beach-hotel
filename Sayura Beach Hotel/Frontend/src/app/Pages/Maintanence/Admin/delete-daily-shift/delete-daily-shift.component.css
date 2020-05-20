@@ -1,0 +1,37 @@
+/* @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css'); */
+.container{
+  width: 100%;
+  height:100%  
+  }
+  
+  .col-sm-9{
+    background-color: #212121;
+    width: 85%; 
+    height: 1100px;
+     
+  }
+  h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: white;
+  }
+  label{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+  }
+  form{
+    width: 80%;
+    margin-left: 200px;
+   
+  }
+  .head{
+    font-size: 28px;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .form-panel{
+    width: 80%;
+  
+  }
+  
+  
