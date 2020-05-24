@@ -43,7 +43,7 @@ Type "ng serve --open"
 open CMD in it and type "node index.js"
 
 ## IMPORTANT
-//Dump20191002 folder contains all the tables.
+Dump20191002 folder contains all the tables.
 Database localhost port = 3306,
 database password = 1234
 
