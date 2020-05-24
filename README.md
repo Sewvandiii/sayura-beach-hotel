@@ -1,4 +1,4 @@
-# SayuraBeachHotel
+# Sayura Beach Hotel
 
 ![sayurabeachhotel](https://user-images.githubusercontent.com/61576355/82745826-41a9cb00-9da6-11ea-8f1c-c8a9ea42c67f.png)
 
