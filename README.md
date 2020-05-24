@@ -42,7 +42,7 @@ Type "ng serve --open"
 ### Step 6
 open CMD in it and type "node index.js"
 
-### ::::IMPORTANT::::
+## IMPORTANT
 //Dump20191002 folder contains all the tables.
 Database localhost port = 3306,
 database password = 1234
@@ -51,5 +51,5 @@ database password = 1234
 Login user names: - AM001,CM001,EM001,MM001,IM001,RM001,TM001
 password: - Abc123
 
-### License
+## License
 [MIT](https://opensource.org/licenses/mit-license.html)
