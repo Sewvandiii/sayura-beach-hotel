@@ -29,26 +29,26 @@ Create a database called "sayura-beach-hotel"
 Import the Dump20191002 folder to that database.
 
 ### Step 3
-Extact the "Sayura Beach Hotel.zip"
-//path: "Sayura Beach hotel/Sayura-Bech-Hotel" has the Front End scource code
+Extact the "Sayura Beach Hotel.zip"<br/>
+path: "Sayura Beach hotel/Sayura-Bech-Hotel" has the Front End scource code
 
 ### Step 4
 Open CMD in it and type "npm install"
 
 ### Step 5
-Type "ng serve --open"
-//path: "Sayura Beach Hotel/Server" contains the back end
+Type "ng serve --open"<br/>
+path: "Sayura Beach Hotel/Server" contains the back end
 
 ### Step 6
 open CMD in it and type "node index.js"
 
 ## IMPORTANT
-Dump20191002 folder contains all the tables.
-Database localhost port = 3306,
-database password = 1234
+Dump20191002 folder contains all the tables.<br/>
+Database localhost port = 3306<br/>
+database password = 1234<br/>
 
 ### Credentials
-Login user names: - AM001,CM001,EM001,MM001,IM001,RM001,TM001
+Login user names: - AM001,CM001,EM001,MM001,IM001,RM001,TM001<br/>
 password: - Abc123
 
 ## License
