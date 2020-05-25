@@ -51,5 +51,19 @@ database password = 1234<br/>
 Login user names: - AM001,CM001,EM001,MM001,IM001,RM001,TM001<br/>
 password: - Abc123
 
+## Contributors
+
+<table>
+    <tr>
+        <td align="center"><a href="https://github.com/Sewvandiii"><img
+                    src="https://avatars0.githubusercontent.com/u/61576355?s=460&u=09001c20e83270ee3afd81a692f4b865f61441eb&v=4" width="80px;"
+                    alt="Sewvandi Wickramasinghe" /><br /><sub><b>Sewvandi Wickramasinghe</b></sub></a>
+        </td>
+        <td align="center"><a href="https://github.com/Viraj97"><img
+                    src="https://avatars1.githubusercontent.com/u/36671096?s=400&u=853a35679e378ed2f92a4f40f3f1fc2df0849977&v=4" width="80px;"
+                    alt="Viraj Rathnayaka" /><br /><sub><b>Viraj Rathnayaka</b></sub></a><br />
+        </td>
+</table>
+
 ## License
 [MIT](https://opensource.org/licenses/mit-license.html)
