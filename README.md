@@ -1,6 +1,8 @@
 # Sayura Beach Hotel
 
+<center>
 ![sayurabeachhotel](https://user-images.githubusercontent.com/61576355/82745826-41a9cb00-9da6-11ea-8f1c-c8a9ea42c67f.png)
+</center>
 
 This project was generated for [Sayura Beach Hotel](http://www.sayurabeachhotel.com/) with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1 and [Nodejs](https://github.com/nodejs).
 
