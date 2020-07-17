@@ -1,7 +1,12 @@
 # Sayura Beach Hotel
 
-![MIT](https://img.shields.io/badge/Licence-MIT-orange)
-![Angular](https://img.shields.io/badge/Angular-CLI-green)
+### Languages
+
+![HTML](https://img.shields.io/badge/Language-HTML-brightgreen)
+![TypeScript](https://img.shields.io/badge/Language-%20TypeScript-yellow)
+![JavaScript](https://img.shields.io/badge/Language-JavaScript-orange)
+![TSQL](https://img.shields.io/badge/Language-TSQL-red)
+![CSS](https://img.shields.io/badge/Language-CSS-blue)
 
 ![sayurabeachhotel](https://user-images.githubusercontent.com/61576355/82745826-41a9cb00-9da6-11ea-8f1c-c8a9ea42c67f.png)
 
@@ -69,4 +74,5 @@ password: - Abc123
 </table>
 
 ### License
-[MIT](https://opensource.org/licenses/mit-license.html)
+
+![MIT](https://img.shields.io/github/license/Sewvandiii/ITProject?color=black)
