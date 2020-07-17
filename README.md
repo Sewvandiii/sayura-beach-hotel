@@ -1,6 +1,6 @@
 # Sayura Beach Hotel
 
-### Languages
+## Languages
 
 ![HTML](https://img.shields.io/badge/Language-HTML-brightgreen)
 ![TypeScript](https://img.shields.io/badge/Language-%20TypeScript-yellow)
@@ -30,36 +30,36 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ### Further help
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-#### Step 1
+### Step 1
 Create a database called "sayura-beach-hotel"
 
-#### Step 2
+### Step 2
 Import the Dump20191002 folder to that database.
 
-#### Step 3
+### Step 3
 Extract the "Sayura Beach Hotel.zip"<br/>
 path: "Sayura Beach hotel/Sayura-Bech-Hotel" has the Front End scource code
 
-#### Step 4
+### Step 4
 Open CMD in it and type "npm install"
 
-#### Step 5
+### Step 5
 Type "ng serve --open"<br/>
 path: "Sayura Beach Hotel/Server" contains the back end
 
-#### Step 6
+### Step 6
 open CMD in it and type "node index.js"
 
-### IMPORTANT
+## IMPORTANT
 Dump20191002 folder contains all the tables.<br/>
 Database localhost port = 3306<br/>
 database password = 1234<br/>
 
-#### Credentials
+## Credentials
 Login user names: - AM001,CM001,EM001,MM001,IM001,RM001,TM001<br/>
 password: - Abc123
 
-### Contributors
+## Contributors
 
 <table>
     <tr>
