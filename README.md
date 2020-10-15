@@ -52,7 +52,7 @@ path: "Sayura Beach Hotel/Server" contains the back end
 ### Step 6
 open CMD in it and type "node index.js"
 
-## Important
+## ⚠ Important
 Dump20191002 folder contains all the tables.<br/>
 Database localhost port = 3306<br/>
 database password = 1234<br/>
